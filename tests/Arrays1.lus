@@ -148,14 +148,6 @@ let
   x_3 = 1-> pre x3;
   automaton a
 
---Initial state
-  state POINT:
-  unless true restart A_ENTRY
-  	let
-		x1 = x_1;
-		x2 = x_2;
-		x3 = x_3;
- 	tel
 
 --execute A entry action
   state A_ENTRY:
