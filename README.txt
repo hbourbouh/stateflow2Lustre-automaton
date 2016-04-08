@@ -1,1 +1,1 @@
-Stateflow to Lustre plus automate
+Stateflow to Lustre automaton

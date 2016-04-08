@@ -96,18 +96,7 @@ let
   switchoff_1 = 0 -> pre switchoff;
   cnt_1 = 0 -> pre cnt;
   automaton b
-
---Initial state
-  state POINT2:
-  unless init restart OFF_ENTRY
-  	let
-		sOff = false;
-		sOn = false;
-		switchon = 0;
-		switchoff = 0;
-		cnt = 0;
- 	tel
-
+  
 --execute OFF entry action
   state OFF_ENTRY:
 	let		
