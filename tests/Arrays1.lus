@@ -1,0 +1,235 @@
+node sf_2
+  (E: bool)
+returns
+  (x_0: int;
+  x_1: int;
+  x_2: int);
+
+var
+  V176_en3: bool;
+  V178_en4: bool;
+  V180_en5: bool;
+  V182_ini: bool;
+  V183_lv6: bool;
+  V185_lv7: bool;
+  V187_lv8: bool;
+  V189_lv9: bool;
+  V191_ok21: bool;
+  V193_ok21_2: bool;
+  V194_ok21_3: bool;
+  V195_ok21_4: bool;
+  V197_s3_1: bool;
+  V198_s3_2: bool;
+  V199_s3t: bool;
+  V201_s4_1: bool;
+  V202_s4_2: bool;
+  V203_s4t: bool;
+  V205_s5_1: bool;
+  V206_s5_2: bool;
+  V207_s5t: bool;
+  V490_x_1_0: int;
+  V491_x_1_1: int;
+  V492_x_1_2: int;
+  V493_x_2_0: int;
+  V494_x_2_1: int;
+  V495_x_2_2: int;
+  V496_x_3_0: int;
+  V497_x_3_1: int;
+  V498_x_3_2: int;
+  V787_cv9: bool;
+  V788_end: bool;
+  V802_cv8: bool;
+  V803_end: bool;
+  V817_cv7: bool;
+  V818_end: bool;
+  V828_cv6: bool;
+  V829_end: bool;
+  V917_z: int;
+  V918_z: int;
+  V919_v: int;
+  V932_z: int;
+  V933_z: int;
+  V934_v: int;
+  V946_z: int;
+  V947_z: int;
+  V948_v: int;
+
+let
+  x_0 = (if V176_en3 then (if (0 = 0) then V948_v else V496_x_3_0) else 
+  V496_x_3_0);
+  x_1 = (if V176_en3 then (if (V947_z = 0) then V948_v else V497_x_3_1) else 
+  V497_x_3_1);
+  x_2 = (if V176_en3 then (if (V947_z = 1) then V948_v else V498_x_3_2) else 
+  V498_x_3_2);
+  V176_en3 = (if ((not false) and ((not V198_s3_2) and ((V191_ok21 and V189_lv9
+  ) or (V191_ok21 and V183_lv6)))) then true else false);
+  V178_en4 = (if ((not false) and ((not V202_s4_2) and (V191_ok21 and V185_lv7)
+  )) then true else false);
+  V180_en5 = (if ((not false) and ((not V206_s5_2) and (V191_ok21 and V187_lv8)
+  )) then true else false);
+  V182_ini = (true -> false);
+  V183_lv6 = (if (V182_ini and (not (V201_s4_1 or (V205_s5_1 or V197_s3_1)))) 
+  then (if (V828_cv6 and V829_end) then true else false) else false);
+  V185_lv7 = (if V197_s3_1 then (if (V817_cv7 and V818_end) then true else 
+  false) else false);
+  V187_lv8 = (if V201_s4_1 then (if (V802_cv8 and V803_end) then true else 
+  false) else false);
+  V189_lv9 = (if V205_s5_1 then (if (V787_cv9 and V788_end) then true else 
+  false) else false);
+  V191_ok21 = (if (V182_ini and (not (V201_s4_1 or (V205_s5_1 or V197_s3_1)))) 
+  then (if (not (false or V195_ok21_4)) then true else V195_ok21_4) else 
+  V195_ok21_4);
+  V193_ok21_2 = (if V205_s5_1 then (if ((not (false or false)) and E) then true 
+  else false) else false);
+  V194_ok21_3 = (if V201_s4_1 then (if ((not (false or V193_ok21_2)) and E) 
+  then true else V193_ok21_2) else V193_ok21_2);
+  V195_ok21_4 = (if V197_s3_1 then (if ((not (false or V194_ok21_3)) and E) 
+  then true else V194_ok21_3) else V194_ok21_3);
+  V197_s3_1 = (false -> (pre V199_s3t));
+  V198_s3_2 = (if V197_s3_1 then (if ((V191_ok21 and V185_lv7) or false) then 
+  false else V197_s3_1) else V197_s3_1);
+  V199_s3t = (if ((not false) and ((not V198_s3_2) and ((V191_ok21 and V189_lv9
+  ) or (V191_ok21 and V183_lv6)))) then true else V198_s3_2);
+  V201_s4_1 = (false -> (pre V203_s4t));
+  V202_s4_2 = (if V201_s4_1 then (if ((V191_ok21 and V187_lv8) or false) then 
+  false else V201_s4_1) else V201_s4_1);
+  V203_s4t = (if ((not false) and ((not V202_s4_2) and (V191_ok21 and V185_lv7)
+  )) then true else V202_s4_2);
+  V205_s5_1 = (false -> (pre V207_s5t));
+  V206_s5_2 = (if V205_s5_1 then (if ((V191_ok21 and V189_lv9) or false) then 
+  false else V205_s5_1) else V205_s5_1);
+  V207_s5t = (if ((not false) and ((not V206_s5_2) and (V191_ok21 and V187_lv8)
+  )) then true else V206_s5_2);
+  V490_x_1_0 = (1 -> (pre x_0));
+  V491_x_1_1 = (1 -> (pre x_1));
+  V492_x_1_2 = (1 -> (pre x_2));
+  V493_x_2_0 = (if V178_en4 then (if (1 = 0) then V919_v else V490_x_1_0) else 
+  V490_x_1_0);
+  V494_x_2_1 = (if V178_en4 then (if (V918_z = 0) then V919_v else V491_x_1_1) 
+  else V491_x_1_1);
+  V495_x_2_2 = (if V178_en4 then (if (V918_z = 1) then V919_v else V492_x_1_2) 
+  else V492_x_1_2);
+  V496_x_3_0 = (if V180_en5 then (if (2 = 0) then V934_v else V493_x_2_0) else 
+  V493_x_2_0);
+  V497_x_3_1 = (if V180_en5 then (if (V933_z = 0) then V934_v else V494_x_2_1) 
+  else V494_x_2_1);
+  V498_x_3_2 = (if V180_en5 then (if (V933_z = 1) then V934_v else V495_x_2_2) 
+  else V495_x_2_2);
+  V787_cv9 = (if ((not (false or false)) and E) then true else false);
+  V788_end = (if ((not (false or false)) and E) then true else false);
+  V802_cv8 = (if ((not (false or V193_ok21_2)) and E) then true else false);
+  V803_end = (if ((not (false or V193_ok21_2)) and E) then true else false);
+  V817_cv7 = (if ((not (false or V194_ok21_3)) and E) then true else false);
+  V818_end = (if ((not (false or V194_ok21_3)) and E) then true else false);
+  V828_cv6 = (if (not (false or V195_ok21_4)) then true else false);
+  V829_end = (if (not (false or V195_ok21_4)) then true else false);
+  V917_z = (1 - 1);
+  V918_z = (1 - 1);
+  V919_v = ((if (1 = 0) then V490_x_1_0 else (if (V917_z = 0) then V491_x_1_1 
+  else (if ((V917_z - 1) = 0) then V492_x_1_2 else 0))) + 1);
+  V932_z = (2 - 1);
+  V933_z = (2 - 1);
+  V934_v = ((if (2 = 0) then V493_x_2_0 else (if (V932_z = 0) then V494_x_2_1 
+  else (if ((V932_z - 1) = 0) then V495_x_2_2 else 0))) + 1);
+  V946_z = (0 - 1);
+  V947_z = (0 - 1);
+  V948_v = ((if (0 = 0) then V496_x_3_0 else (if (V946_z = 0) then V497_x_3_1 
+  else (if ((V946_z - 1) = 0) then V498_x_3_2 else 0))) + 1);
+tel
+
+----------------********************************** automaton version********************
+
+node arrays(E: bool) returns(x1, x2, x3: int);
+var x_1, x_2, x_3 : int;
+let
+  -- initial values
+  x_1 = 1-> pre x1;
+  x_2 = 1-> pre x2;
+  x_3 = 1-> pre x3;
+  automaton a
+
+--Initial state
+  state POINT:
+  unless true restart A_ENTRY
+  	let
+		x1 = x_1;
+		x2 = x_2;
+		x3 = x_3;
+ 	tel
+
+--execute A entry action
+  state A_ENTRY:
+	let		
+		x1 = x_1 + 1;
+		x2 = x_2;
+		x3 = x_3;
+	tel	
+  until true resume A_IDL
+
+--execute A during action		
+  state A_IDL:
+  unless E  resume A_EXIT_B_ENTRY
+	let		
+		x1 = x_1;
+		x2 = x_2;
+		x3 = x_3;
+	tel	
+  
+--execute A exit action and B entry action
+  state A_EXIT_B_ENTRY:
+	let		
+		x1 = x_1;
+		x2 = x_2 + 1;
+		x3 = x_3;
+	tel	
+  until true resume B_IDL
+
+--execute B during action
+   state B_IDL:
+   unless E  resume B_EXIT_C_ENTRY
+	let		
+		x1 = x_1;
+		x2 = x_2;
+		x3 = x_3;
+	tel
+		
+--execute B exit action and C entry action	
+   state B_EXIT_C_ENTRY:
+   let		
+		x1 = x_1;
+		x2 = x_2;
+		x3 = x_3 + 1;
+	tel	
+  until true resume C_IDL
+  
+  --execute C during action
+   state C_IDL:
+   unless E  resume C_EXIT_A_ENTRY
+	let		
+		x1 = x_1;
+		x2 = x_2;
+		x3 = x_3;
+	tel
+		
+--execute C exit action and A entry action	
+   state C_EXIT_A_ENTRY:
+   let		
+		x1 = x_1 + 1;
+		x2 = x_2;
+		x3 = x_3;
+	tel	
+  until true resume A_IDL
+
+tel
+
+
+
+------------**************Verification****************--------------
+node top (E: bool) returns (OK:bool);
+var x_1, x_2, x_3, y_1, y_2, y_3 :int;
+let
+  (x_1, x_2, x_3) = sf_2(E);
+  (y_1, y_2, y_3) = arrays(E);
+  OK = x_1 = y_1 and x_2 = y_2 and x_3 = y_3  ;
+  --%PROPERTY OK=true;
+tel

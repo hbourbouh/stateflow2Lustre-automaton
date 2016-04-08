@@ -1,0 +1,233 @@
+ -- $Id$
+-- model_file: sf2lus/Arrays1.mdl
+-- model_name: Arrays1
+-- command line: /home/bourbouh/Documents/ss2lus0.01b/bin/sf2lus.bc sf2lus/Arrays1.mdl -o sf2lus/Arrays.lus 
+
+type event = bool;
+const set = true; clr = false;
+
+
+-- link id=9 name=E C -> A
+node evs9_(E: event) returns(evs9: bool);
+let
+  evs9 = E;
+tel
+
+-- link id=8 name=E B -> C
+node evs8_(E: event) returns(evs8: bool);
+let
+  evs8 = E;
+tel
+
+-- link id=7 name=E A -> B
+node evs7_(E: event) returns(evs7: bool);
+let
+  evs7 = E;
+tel
+
+-- link id=9 name=E C -> A
+node lv9_(E: event; ok21, lv9: bool) returns(ok21o, lv9o: bool);
+var cv9, end, end_1: bool;
+let
+  end_1 = false;
+  ok21o, cv9, end =
+    if ((not (end_1 or ok21)) and evs9_(E)) then (true, true, true) else (ok21, false, end_1);
+  lv9o = if (cv9 and end) then (true) else (lv9);
+tel
+
+-- link id=8 name=E B -> C
+node lv8_(E: event; ok21, lv8: bool) returns(ok21o, lv8o: bool);
+var cv8, end, end_1: bool;
+let
+  end_1 = false;
+  ok21o, cv8, end =
+    if ((not (end_1 or ok21)) and evs8_(E)) then (true, true, true) else (ok21, false, end_1);
+  lv8o = if (cv8 and end) then (true) else (lv8);
+tel
+
+-- link id=7 name=E A -> B
+node lv7_(E: event; ok21, lv7: bool) returns(ok21o, lv7o: bool);
+var cv7, end, end_1: bool;
+let
+  end_1 = false;
+  ok21o, cv7, end =
+    if ((not (end_1 or ok21)) and evs7_(E)) then (true, true, true) else (ok21, false, end_1);
+  lv7o = if (cv7 and end) then (true) else (lv7);
+tel
+
+-- link id=6 name= p13 -> A
+node lv6_(ok21, lv6: bool) returns(ok21o, lv6o: bool);
+var cv6, end, end_1: bool;
+let
+  end_1 = false;
+  ok21o, cv6, end = if (not (end_1 or ok21)) then (true, true, true) else (ok21, false, end_1);
+  lv6o = if (cv6 and end) then (true) else (lv6);
+tel
+
+-- Array get for 1-dimensional arrays of type int
+node aget1_i(const l: int; z: int; Ai: int^l) returns(v: int);
+let
+  v =
+    if (z = 0) then Ai[0]
+    else with (l = 1) then 0 else aget1_i((l - 1), (z - 1), Ai[1..(l - 1)]);
+tel
+
+-- Array set for 1-dimensional arrays of type int, non-singleton
+node aset1_i_n(const l: int; z, v: int; Ai: int^l) returns(Ao: int^l);
+let
+  Ao[0] = if (z = 0) then v else Ai[0];
+  Ao[1..(l - 1)] =
+    with (l = 2) then if (z = 1) then [v] else [Ai[1]]
+    else aset1_i_n((l - 1), (z - 1), v, Ai[1..(l - 1)]);
+tel
+
+-- Array set for 1-dimensional arrays of type int, singleton
+node aset1_i_1(z, v: int; Ai: int^1) returns(Ao: int^1);
+let
+  Ao[0] = if (z = 0) then v else Ai[0];
+tel
+
+-- Array set for 1-dimensional arrays of type int, toplevel
+node aset1_i(const l: int; z, v: int; Ai: int^l) returns(Ao: int^l);
+let
+  Ao = with (l = 1) then aset1_i_1(z, v, Ai) else aset1_i_n(l, z, v, Ai);
+tel
+
+-- entry action for node id=4 name=B
+-- x[2]++
+node ena4(x: int^3) returns(xo: int^3);
+let
+  xo = aset1_i(3, 1, aget1_i(3, 1, x) + 1, x);
+tel
+
+-- entry action for node id=5 name=C
+-- x[3]++
+node ena5(x: int^3) returns(xo: int^3);
+let
+  xo = aset1_i(3, 2, aget1_i(3, 2, x) + 1, x);
+tel
+
+-- entry action for node id=3 name=A
+-- x[1]++
+node ena3(x: int^3) returns(xo: int^3);
+let
+  xo = aset1_i(3, 0, aget1_i(3, 0, x) + 1, x);
+tel
+
+-- node id=13 name=_point
+node iniu13lv(ok21, trm, ini: bool) returns(ok21o, lv6: bool);
+let
+  ok21o, lv6 = lv6_(ok21, false);
+tel
+
+-- node id=3 name=A
+node su3lv(E: event; ok21, s3, trm, ini: bool) returns(ok21o, lv7: bool);
+let
+  ok21o, lv7 = lv7_(E, ok21, false);
+tel
+
+-- node id=3 name=A
+node su3ex(ok21, lv7, s3, trm, ini: bool) returns(s3o: bool);
+let
+  s3o = if ((ok21 and lv7) or trm) then (false) else (s3);
+tel
+
+-- node id=3 name=A
+node su3en(ok21, lv6, lv9, s3, trm, ini: bool) returns(en3, s3o: bool);
+let
+  s3o, en3 =
+    if ((not trm) and ((not s3) and ((ok21 and lv9) or (ok21 and lv6)))) then 
+    (true, true) else (s3, false);
+tel
+
+-- node id=5 name=C
+node su5lv(E: event; ok21, s5, trm, ini: bool) returns(ok21o, lv9: bool);
+let
+  ok21o, lv9 = lv9_(E, ok21, false);
+tel
+
+-- node id=5 name=C
+node su5ex(ok21, lv9, s5, trm, ini: bool) returns(s5o: bool);
+let
+  s5o = if ((ok21 and lv9) or trm) then (false) else (s5);
+tel
+
+-- node id=5 name=C
+node su5en(ok21, lv8, s5, trm, ini: bool) returns(en5, s5o: bool);
+let
+  s5o, en5 =
+    if ((not trm) and ((not s5) and (ok21 and lv8))) then (true, true) else (s5, false);
+tel
+
+-- node id=4 name=B
+node su4lv(E: event; ok21, s4, trm, ini: bool) returns(ok21o, lv8: bool);
+let
+  ok21o, lv8 = lv8_(E, ok21, false);
+tel
+
+-- node id=4 name=B
+node su4ex(ok21, lv8, s4, trm, ini: bool) returns(s4o: bool);
+let
+  s4o = if ((ok21 and lv8) or trm) then (false) else (s4);
+tel
+
+-- node id=4 name=B
+node su4en(ok21, lv7, s4, trm, ini: bool) returns(en4, s4o: bool);
+let
+  s4o, en4 =
+    if ((not trm) and ((not s4) and (ok21 and lv7))) then (true, true) else (s4, false);
+tel
+
+-- Array fill for 1-dimensional arrays of type int, non-singleton
+node afill1_i_n(const l: int; v: int) returns(Ao: int^l);
+let
+  Ao[0] = v;
+  Ao[1..(l - 1)] = with (l = 2) then [v] else afill1_i_n((l - 1), v);
+tel
+
+-- Array fill for 1-dimensional arrays of type int, singleton
+node afill1_i_1(v: int) returns(Ao: int^1);
+let
+  Ao[0] = v;
+tel
+
+-- Array fill for 1-dimensional arrays of type int
+node afill1_i(const l: int; v: int) returns(Ao: int^l);
+let
+  Ao = with (l = 1) then afill1_i_1(v) else afill1_i_n(l, v);
+tel
+
+-- graph id=12 name=21,GCTOP
+node sf_2(E: event) returns(x: int^3);
+var en3, en3_1, en4, en4_1, en5, en5_1, ini, lv6, lv6_1, lv7, lv7_1, lv8, lv8_1, lv9, lv9_1, 
+    ok21, ok21_1, ok21_2, ok21_3, ok21_4, s3, s3_1, s3_2, s3t, s4, s4_1, s4_2, s4t, s5, s5_1, 
+    s5_2, s5t, trm: bool; x_1, x_2, x_3: int^3;
+let
+  s4_1 = false -> pre s4;
+  s5_1 = false -> pre s5;
+  s3_1 = false -> pre s3;
+  x_1 = afill1_i(3, 1) -> pre x;
+  ok21_1 = (false);
+  en4_1, en5_1, en3_1 = (false, false, false);
+  ini = true -> false;
+  trm = false;
+  lv9_1, lv8_1, lv7_1, lv6_1 = (false, false, false, false);
+  ok21_2, lv9 = if s5_1 then su5lv(E, ok21_1, s5_1, trm, ini) else (ok21_1, lv9_1);
+  ok21_3, lv8 = if s4_1 then su4lv(E, ok21_2, s4_1, trm, ini) else (ok21_2, lv8_1);
+  ok21_4, lv7 = if s3_1 then su3lv(E, ok21_3, s3_1, trm, ini) else (ok21_3, lv7_1);
+  ok21, lv6 =
+    if (ini and (not (s4_1 or (s5_1 or s3_1)))) then iniu13lv(ok21_4, trm, ini)
+    else (ok21_4, lv6_1);
+  s4_2 = if s4_1 then su4ex(ok21, lv8, s4_1, trm, ini) else (s4_1);
+  s5_2 = if s5_1 then su5ex(ok21, lv9, s5_1, trm, ini) else (s5_1);
+  s3_2 = if s3_1 then su3ex(ok21, lv7, s3_1, trm, ini) else (s3_1);
+  en4, s4t = su4en(ok21, lv7, s4_2, trm, ini);
+  en5, s5t = su5en(ok21, lv8, s5_2, trm, ini);
+  en3, s3t = su3en(ok21, lv6, lv9, s3_2, trm, ini);
+  x_2 = if en4 then ena4(x_1) else (x_1);
+  x_3 = if en5 then ena5(x_2) else (x_2);
+  x = if en3 then ena3(x_3) else (x_3);
+  s4 = s4t;
+  s5 = s5t;
+  s3 = s3t;
+tel
