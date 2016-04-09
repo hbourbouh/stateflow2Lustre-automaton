@@ -401,15 +401,6 @@ let
 --Automate A 
   automaton a
 
---Initial state
-  state POINT_A:
-  unless true resume A1
-  	let
-		a = 0;
-		b = 0;
-		c = 0;
- 	tel
-
 --execute A entry action
   state A1:
    unless (T and not init) resume A2
@@ -474,7 +465,7 @@ let
 	    a_1 = 0-> pre a;
 		b_1 = 0-> pre b;
 		c_1 = 0-> pre c;
-		automaton aa2
+		automaton a2
 
 			
 		state A2A_ENTRY:

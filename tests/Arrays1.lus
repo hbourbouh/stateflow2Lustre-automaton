@@ -220,8 +220,8 @@ tel
 node top (E: bool) returns (OK:bool);
 var x_1, x_2, x_3, y_1, y_2, y_3 :int;
 let
-  (x_1, x_2, x_3) = sf_2(E);
-  (y_1, y_2, y_3) = arrays(E);
+  (x_1, x_2, x_3) = sf_2(E); --Verimag version of translation
+  (y_1, y_2, y_3) = arrays(E); --Automaton version of translation
   OK = x_1 = y_1 and x_2 = y_2 and x_3 = y_3  ;
   --%PROPERTY OK=true;
 tel
