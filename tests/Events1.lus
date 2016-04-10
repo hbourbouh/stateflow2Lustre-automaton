@@ -9,406 +9,407 @@ returns
   c: int);
 
 var
-  V853_ini: bool;
-  V854_ok10: bool;
-  V856_ok11: bool;
-  V858_ok14: bool;
-  V860_ok3: bool;
-  V862_ok4: bool;
-  V865_ok7: bool;
-  V867_s12: bool;
-  V868_s12_1: bool;
-  V869_s13: bool;
-  V870_s13_1: bool;
-  V871_s15: bool;
-  V872_s15_1: bool;
-  V873_s16: bool;
-  V874_s16_1: bool;
-  V875_s5: bool;
-  V876_s5_1: bool;
-  V877_s6: bool;
-  V878_s6_1: bool;
-  V879_s8: bool;
-  V880_s8_1: bool;
-  V881_s9: bool;
-  V882_s9_1: bool;
-  V883_sg10: bool;
-  V884_sg10_1: bool;
-  V885_sg11: bool;
-  V886_sg11_1: bool;
-  V887_sg14: bool;
-  V888_sg14_1: bool;
-  V889_sg3: bool;
-  V890_sg3_1: bool;
-  V891_sg4: bool;
-  V892_sg4_1: bool;
-  V893_sg7: bool;
-  V894_sg7_1: bool;
-  V896_R1: bool;
-  V898_S1: bool;
-  V900_T1: bool;
-  V902_a_1: int;
-  V903_b_1: int;
-  V904_c_1: int;
-  V2635_lv17: bool;
-  V2636_lv18: bool;
-  V2637_lv19: bool;
-  V2638_ok3_1: bool;
-  V2639_ok3_2: bool;
-  V2640_sg4_1: bool;
-  V2641_sg7_1: bool;
-  V2642_R1_1: bool;
-  V2643_S1_1: bool;
-  V2644_T1_1: bool;
-  V2645_a_1: int;
-  V2646_cv19: bool;
-  V2647_end: bool;
-  V2648_cv18: bool;
+  V846_ini: bool;
+  V847_ok10: bool;
+  V849_ok11: bool;
+  V851_ok14: bool;
+  V853_ok3: bool;
+  V855_ok4: bool;
+  V858_ok7: bool;
+  V860_s12: bool;
+  V861_s12_1: bool;
+  V862_s13: bool;
+  V863_s13_1: bool;
+  V864_s15: bool;
+  V865_s15_1: bool;
+  V866_s16: bool;
+  V867_s16_1: bool;
+  V868_s5: bool;
+  V869_s5_1: bool;
+  V870_s6: bool;
+  V871_s6_1: bool;
+  V872_s8: bool;
+  V873_s8_1: bool;
+  V874_s9: bool;
+  V875_s9_1: bool;
+  V876_sg10: bool;
+  V877_sg10_1: bool;
+  V878_sg11: bool;
+  V879_sg11_1: bool;
+  V880_sg14: bool;
+  V881_sg14_1: bool;
+  V882_sg3: bool;
+  V883_sg3_1: bool;
+  V884_sg4: bool;
+  V885_sg4_1: bool;
+  V886_sg7: bool;
+  V887_sg7_1: bool;
+  V889_R1: bool;
+  V891_S1: bool;
+  V893_T1: bool;
+  V895_a_1: int;
+  V896_b_1: int;
+  V897_c_1: int;
+  V2621_lv17: bool;
+  V2622_lv18: bool;
+  V2623_lv19: bool;
+  V2624_ok3_1: bool;
+  V2625_ok3_2: bool;
+  V2626_sg4_1: bool;
+  V2627_sg7_1: bool;
+  V2628_R1_1: bool;
+  V2629_S1_1: bool;
+  V2630_T1_1: bool;
+  V2631_a_1: int;
+  V2632_cv19: bool;
+  V2633_end: bool;
+  V2634_cv18: bool;
+  V2635_end: bool;
+  V2636_cv17: bool;
+  V2637_end: bool;
+  V2638_en5: bool;
+  V2639_en6: bool;
+  V2640_lv20: bool;
+  V2641_lv21: bool;
+  V2642_lv22: bool;
+  V2643_ok4_1: bool;
+  V2644_ok4_2: bool;
+  V2645_s5_1: bool;
+  V2646_s6_1: bool;
+  V2647_a_1: int;
+  V2648_cv22: bool;
   V2649_end: bool;
-  V2650_cv17: bool;
+  V2650_cv21: bool;
   V2651_end: bool;
-  V2652_en5: bool;
-  V2653_en6: bool;
-  V2654_lv20: bool;
-  V2655_lv21: bool;
-  V2656_lv22: bool;
-  V2657_ok4_1: bool;
-  V2658_ok4_2: bool;
-  V2659_s5_1: bool;
-  V2660_s6_1: bool;
-  V2661_a_1: int;
-  V2662_cv22: bool;
-  V2663_end: bool;
-  V2664_cv21: bool;
-  V2665_end: bool;
-  V2666_cv20: bool;
-  V2667_end: bool;
-  V2668_trm: bool;
-  V2669_en8: bool;
-  V2670_en9: bool;
-  V2671_lv23: bool;
-  V2672_lv24: bool;
-  V2673_lv25: bool;
-  V2674_ok7_1: bool;
-  V2675_ok7_2: bool;
-  V2676_s8_1: bool;
-  V2677_s9_1: bool;
-  V2678_a_1: int;
-  V2679_cv25: bool;
-  V2680_end: bool;
-  V2681_cv24: bool;
-  V2682_end: bool;
-  V2683_cv23: bool;
-  V2684_end: bool;
-  V2685_trm: bool;
-  V2735_lv26: bool;
-  V2736_lv27: bool;
-  V2737_lv28: bool;
-  V2738_ok10_1: bool;
-  V2739_ok10_2: bool;
-  V2740_sg11_1: bool;
-  V2741_sg14_1: bool;
-  V2742_b_1: int;
-  V2743_c_1: int;
-  V2744_cv28: bool;
-  V2745_end: bool;
-  V2746_cv27: bool;
+  V2652_cv20: bool;
+  V2653_end: bool;
+  V2654_trm: bool;
+  V2655_en8: bool;
+  V2656_en9: bool;
+  V2657_lv23: bool;
+  V2658_lv24: bool;
+  V2659_lv25: bool;
+  V2660_ok7_1: bool;
+  V2661_ok7_2: bool;
+  V2662_s8_1: bool;
+  V2663_s9_1: bool;
+  V2664_a_1: int;
+  V2665_cv25: bool;
+  V2666_end: bool;
+  V2667_cv24: bool;
+  V2668_end: bool;
+  V2669_cv23: bool;
+  V2670_end: bool;
+  V2671_trm: bool;
+  V2721_lv26: bool;
+  V2722_lv27: bool;
+  V2723_lv28: bool;
+  V2724_ok10_1: bool;
+  V2725_ok10_2: bool;
+  V2726_sg11_1: bool;
+  V2727_sg14_1: bool;
+  V2728_b_1: int;
+  V2729_c_1: int;
+  V2730_cv28: bool;
+  V2731_end: bool;
+  V2732_cv27: bool;
+  V2733_end: bool;
+  V2734_cv26: bool;
+  V2735_end: bool;
+  V2736_en12: bool;
+  V2737_en13: bool;
+  V2738_lv29: bool;
+  V2739_lv30: bool;
+  V2740_lv31: bool;
+  V2741_ok11_1: bool;
+  V2742_ok11_2: bool;
+  V2743_s12_1: bool;
+  V2744_s13_1: bool;
+  V2745_b_1: int;
+  V2746_cv31: bool;
   V2747_end: bool;
-  V2748_cv26: bool;
+  V2748_cv30: bool;
   V2749_end: bool;
-  V2750_en12: bool;
-  V2751_en13: bool;
-  V2752_lv29: bool;
-  V2753_lv30: bool;
-  V2754_lv31: bool;
-  V2755_ok11_1: bool;
-  V2756_ok11_2: bool;
-  V2757_s12_1: bool;
-  V2758_s13_1: bool;
-  V2759_b_1: int;
-  V2760_cv31: bool;
-  V2761_end: bool;
-  V2762_cv30: bool;
-  V2763_end: bool;
-  V2764_cv29: bool;
-  V2765_end: bool;
-  V2766_trm: bool;
-  V2767_en15: bool;
-  V2768_en16: bool;
-  V2769_lv32: bool;
-  V2770_lv33: bool;
-  V2771_lv34: bool;
-  V2772_ok14_1: bool;
-  V2773_ok14_2: bool;
-  V2774_s15_1: bool;
-  V2775_s16_1: bool;
-  V2776_b_1: int;
-  V2777_cv34: bool;
-  V2778_end: bool;
-  V2779_cv33: bool;
-  V2780_end: bool;
-  V2781_cv32: bool;
-  V2782_end: bool;
-  V2783_trm: bool;
+  V2750_cv29: bool;
+  V2751_end: bool;
+  V2752_trm: bool;
+  V2753_en15: bool;
+  V2754_en16: bool;
+  V2755_lv32: bool;
+  V2756_lv33: bool;
+  V2757_lv34: bool;
+  V2758_ok14_1: bool;
+  V2759_ok14_2: bool;
+  V2760_s15_1: bool;
+  V2761_s16_1: bool;
+  V2762_b_1: int;
+  V2763_cv34: bool;
+  V2764_end: bool;
+  V2765_cv33: bool;
+  V2766_end: bool;
+  V2767_cv32: bool;
+  V2768_end: bool;
+  V2769_trm: bool;
 
 let
-  a = (if (V893_sg7 and V2669_en8) then (x + 1) else V2678_a_1);
-  b = (if (V887_sg14 and V2767_en15) then (x + 5) else V2776_b_1);
-  c = (if (V883_sg10 and V2736_lv27) then (V2743_c_1 + 1) else V2743_c_1);
-  V853_ini = (true -> false);
-  V854_ok10 = (if (V853_ini and (not (V886_sg11_1 or V888_sg14_1))) then (if 
-  (not (false or V2739_ok10_2)) then true else V2739_ok10_2) else V2739_ok10_2)
+  a = (if (V886_sg7 and V2655_en8) then (V2664_a_1 + 1) else V2664_a_1);
+  b = (if (V880_sg14 and V2753_en15) then (x + 5) else V2762_b_1);
+  c = (if (V876_sg10 and V2722_lv27) then (V2729_c_1 + 1) else V2729_c_1);
+  V846_ini = (true -> false);
+  V847_ok10 = (if (V846_ini and (not (V879_sg11_1 or V881_sg14_1))) then (if 
+  (not (false or V2725_ok10_2)) then true else V2725_ok10_2) else V2725_ok10_2)
   ;
-  V856_ok11 = (if ((V885_sg11 and (not V886_sg11_1)) and (not (V870_s13_1 or 
-  V868_s12_1))) then (if (not (false or V2756_ok11_2)) then true else 
-  V2756_ok11_2) else V2756_ok11_2);
-  V858_ok14 = (if ((V887_sg14 and (not V888_sg14_1)) and (not (V874_s16_1 or 
-  V872_s15_1))) then (if (not (false or V2773_ok14_2)) then true else 
-  V2773_ok14_2) else V2773_ok14_2);
-  V860_ok3 = (if (V853_ini and (not (V892_sg4_1 or V894_sg7_1))) then (if (not 
-  (false or V2639_ok3_2)) then true else V2639_ok3_2) else V2639_ok3_2);
-  V862_ok4 = (if ((V891_sg4 and (not V892_sg4_1)) and (not (V878_s6_1 or 
-  V876_s5_1))) then (if (not (false or V2658_ok4_2)) then true else V2658_ok4_2
-  ) else V2658_ok4_2);
-  V865_ok7 = (if ((V893_sg7 and (not V894_sg7_1)) and (not (V882_s9_1 or 
-  V880_s8_1))) then (if (not (false or V2675_ok7_2)) then true else V2675_ok7_2
-  ) else V2675_ok7_2);
-  V867_s12 = (if ((not V2766_trm) and ((not V2757_s12_1) and ((V856_ok11 and 
-  V2753_lv30) or (V856_ok11 and V2752_lv29)))) then true else V2757_s12_1);
-  V868_s12_1 = (false -> (pre V867_s12));
-  V869_s13 = (if ((not V2766_trm) and ((not V2758_s13_1) and (V856_ok11 and 
-  V2754_lv31))) then true else V2758_s13_1);
-  V870_s13_1 = (false -> (pre V869_s13));
-  V871_s15 = (if ((not V2783_trm) and ((not V2774_s15_1) and ((V858_ok14 and 
-  V2770_lv33) or (V858_ok14 and V2769_lv32)))) then true else V2774_s15_1);
-  V872_s15_1 = (false -> (pre V871_s15));
-  V873_s16 = (if ((not V2783_trm) and ((not V2775_s16_1) and (V858_ok14 and 
-  V2771_lv34))) then true else V2775_s16_1);
-  V874_s16_1 = (false -> (pre V873_s16));
-  V875_s5 = (if ((not V2668_trm) and ((not V2659_s5_1) and ((V862_ok4 and 
-  V2655_lv21) or (V862_ok4 and V2654_lv20)))) then true else V2659_s5_1);
-  V876_s5_1 = (false -> (pre V875_s5));
-  V877_s6 = (if ((not V2668_trm) and ((not V2660_s6_1) and (V862_ok4 and 
-  V2656_lv22))) then true else V2660_s6_1);
-  V878_s6_1 = (false -> (pre V877_s6));
-  V879_s8 = (if ((not V2685_trm) and ((not V2676_s8_1) and ((V865_ok7 and 
-  V2673_lv25) or (V865_ok7 and V2671_lv23)))) then true else V2676_s8_1);
-  V880_s8_1 = (false -> (pre V879_s8));
-  V881_s9 = (if ((not V2685_trm) and ((not V2677_s9_1) and (V865_ok7 and 
-  V2672_lv24))) then true else V2677_s9_1);
-  V882_s9_1 = (false -> (pre V881_s9));
-  V883_sg10 = ((V853_ini and (not false)) -> ((V853_ini or (pre V883_sg10)) and 
+  V849_ok11 = (if ((V878_sg11 and (not V879_sg11_1)) and (not (V863_s13_1 or 
+  V861_s12_1))) then (if (not (false or V2742_ok11_2)) then true else 
+  V2742_ok11_2) else V2742_ok11_2);
+  V851_ok14 = (if ((V880_sg14 and (not V881_sg14_1)) and (not (V867_s16_1 or 
+  V865_s15_1))) then (if (not (false or V2759_ok14_2)) then true else 
+  V2759_ok14_2) else V2759_ok14_2);
+  V853_ok3 = (if (V846_ini and (not (V885_sg4_1 or V887_sg7_1))) then (if (not 
+  (false or V2625_ok3_2)) then true else V2625_ok3_2) else V2625_ok3_2);
+  V855_ok4 = (if ((V884_sg4 and (not V885_sg4_1)) and (not (V871_s6_1 or 
+  V869_s5_1))) then (if (not (false or V2644_ok4_2)) then true else V2644_ok4_2
+  ) else V2644_ok4_2);
+  V858_ok7 = (if ((V886_sg7 and (not V887_sg7_1)) and (not (V875_s9_1 or 
+  V873_s8_1))) then (if (not (false or V2661_ok7_2)) then true else V2661_ok7_2
+  ) else V2661_ok7_2);
+  V860_s12 = (if ((not V2752_trm) and ((not V2743_s12_1) and ((V849_ok11 and 
+  V2739_lv30) or (V849_ok11 and V2738_lv29)))) then true else V2743_s12_1);
+  V861_s12_1 = (false -> (pre V860_s12));
+  V862_s13 = (if ((not V2752_trm) and ((not V2744_s13_1) and (V849_ok11 and 
+  V2740_lv31))) then true else V2744_s13_1);
+  V863_s13_1 = (false -> (pre V862_s13));
+  V864_s15 = (if ((not V2769_trm) and ((not V2760_s15_1) and ((V851_ok14 and 
+  V2756_lv33) or (V851_ok14 and V2755_lv32)))) then true else V2760_s15_1);
+  V865_s15_1 = (false -> (pre V864_s15));
+  V866_s16 = (if ((not V2769_trm) and ((not V2761_s16_1) and (V851_ok14 and 
+  V2757_lv34))) then true else V2761_s16_1);
+  V867_s16_1 = (false -> (pre V866_s16));
+  V868_s5 = (if ((not V2654_trm) and ((not V2645_s5_1) and ((V855_ok4 and 
+  V2641_lv21) or (V855_ok4 and V2640_lv20)))) then true else V2645_s5_1);
+  V869_s5_1 = (false -> (pre V868_s5));
+  V870_s6 = (if ((not V2654_trm) and ((not V2646_s6_1) and (V855_ok4 and 
+  V2642_lv22))) then true else V2646_s6_1);
+  V871_s6_1 = (false -> (pre V870_s6));
+  V872_s8 = (if ((not V2671_trm) and ((not V2662_s8_1) and ((V858_ok7 and 
+  V2659_lv25) or (V858_ok7 and V2657_lv23)))) then true else V2662_s8_1);
+  V873_s8_1 = (false -> (pre V872_s8));
+  V874_s9 = (if ((not V2671_trm) and ((not V2663_s9_1) and (V858_ok7 and 
+  V2658_lv24))) then true else V2663_s9_1);
+  V875_s9_1 = (false -> (pre V874_s9));
+  V876_sg10 = ((V846_ini and (not false)) -> ((V846_ini or (pre V876_sg10)) and 
   (not false)));
-  V884_sg10_1 = (false -> (pre V883_sg10));
-  V885_sg11 = (if ((not false) and ((not V2740_sg11_1) and (V854_ok10 and 
-  V2736_lv27))) then true else V2740_sg11_1);
-  V886_sg11_1 = (false -> (pre V885_sg11));
-  V887_sg14 = (if ((not false) and ((not V2741_sg14_1) and ((V854_ok10 and 
-  V2737_lv28) or (V854_ok10 and V2735_lv26)))) then true else V2741_sg14_1);
-  V888_sg14_1 = (false -> (pre V887_sg14));
-  V889_sg3 = ((V853_ini and (not false)) -> ((V853_ini or (pre V889_sg3)) and 
+  V877_sg10_1 = (false -> (pre V876_sg10));
+  V878_sg11 = (if ((not false) and ((not V2726_sg11_1) and (V847_ok10 and 
+  V2722_lv27))) then true else V2726_sg11_1);
+  V879_sg11_1 = (false -> (pre V878_sg11));
+  V880_sg14 = (if ((not false) and ((not V2727_sg14_1) and ((V847_ok10 and 
+  V2723_lv28) or (V847_ok10 and V2721_lv26)))) then true else V2727_sg14_1);
+  V881_sg14_1 = (false -> (pre V880_sg14));
+  V882_sg3 = ((V846_ini and (not false)) -> ((V846_ini or (pre V882_sg3)) and 
   (not false)));
-  V890_sg3_1 = (false -> (pre V889_sg3));
-  V891_sg4 = (if ((not false) and ((not V2640_sg4_1) and (V860_ok3 and 
-  V2636_lv18))) then true else V2640_sg4_1);
-  V892_sg4_1 = (false -> (pre V891_sg4));
-  V893_sg7 = (if ((not false) and ((not V2641_sg7_1) and ((V860_ok3 and 
-  V2637_lv19) or (V860_ok3 and V2635_lv17)))) then true else V2641_sg7_1);
-  V894_sg7_1 = (false -> (pre V893_sg7));
-  V896_R1 = (if (V893_sg7 and V2673_lv25) then true else V2642_R1_1);
-  V898_S1 = (if (V893_sg7 and V2672_lv24) then true else V2643_S1_1);
-  V900_T1 = (if (V889_sg3 and V2636_lv18) then true else V2644_T1_1);
-  V902_a_1 = (0 -> (pre a));
-  V903_b_1 = (0 -> (pre b));
-  V904_c_1 = (0 -> (pre c));
-  V2635_lv17 = (if (V853_ini and (not (V892_sg4_1 or V894_sg7_1))) then (if (
-  V2650_cv17 and V2651_end) then true else false) else false);
-  V2636_lv18 = (if V894_sg7_1 then (if (V2648_cv18 and V2649_end) then true 
+  V883_sg3_1 = (false -> (pre V882_sg3));
+  V884_sg4 = (if ((not false) and ((not V2626_sg4_1) and (V853_ok3 and 
+  V2622_lv18))) then true else V2626_sg4_1);
+  V885_sg4_1 = (false -> (pre V884_sg4));
+  V886_sg7 = (if ((not false) and ((not V2627_sg7_1) and ((V853_ok3 and 
+  V2623_lv19) or (V853_ok3 and V2621_lv17)))) then true else V2627_sg7_1);
+  V887_sg7_1 = (false -> (pre V886_sg7));
+  V889_R1 = (if (V886_sg7 and V2659_lv25) then true else V2628_R1_1);
+  V891_S1 = (if (V886_sg7 and V2658_lv24) then true else V2629_S1_1);
+  V893_T1 = (if (V882_sg3 and V2622_lv18) then true else V2630_T1_1);
+  V895_a_1 = (0 -> (pre a));
+  V896_b_1 = (0 -> (pre b));
+  V897_c_1 = (0 -> (pre c));
+  V2621_lv17 = (if (V846_ini and (not (V885_sg4_1 or V887_sg7_1))) then (if (
+  V2636_cv17 and V2637_end) then true else false) else false);
+  V2622_lv18 = (if V887_sg7_1 then (if (V2634_cv18 and V2635_end) then true 
   else false) else false);
-  V2637_lv19 = (if V892_sg4_1 then (if (V2646_cv19 and V2647_end) then true 
+  V2623_lv19 = (if V885_sg4_1 then (if (V2632_cv19 and V2633_end) then true 
   else false) else false);
-  V2638_ok3_1 = (if V892_sg4_1 then (if ((not (false or false)) and T) then 
+  V2624_ok3_1 = (if V885_sg4_1 then (if ((not (false or false)) and T) then 
   true else false) else false);
-  V2639_ok3_2 = (if V894_sg7_1 then (if ((not (false or V2638_ok3_1)) and T) 
-  then true else V2638_ok3_1) else V2638_ok3_1);
-  V2640_sg4_1 = (if V892_sg4_1 then (if ((V860_ok3 and V2637_lv19) or false) 
-  then false else V892_sg4_1) else V892_sg4_1);
-  V2641_sg7_1 = (if V894_sg7_1 then (if ((V860_ok3 and V2636_lv18) or false) 
-  then false else V894_sg7_1) else V894_sg7_1);
-  V2642_R1_1 = (if (V891_sg4 and V2655_lv21) then true else false);
-  V2643_S1_1 = (if (V891_sg4 and V2656_lv22) then true else false);
-  V2644_T1_1 = (if (V889_sg3 and V2637_lv19) then true else false);
-  V2645_a_1 = (if (V891_sg4 and V2652_en5) then (x + 3) else V2661_a_1);
-  V2646_cv19 = (if ((not (false or false)) and T) then true else false);
-  V2647_end = (if ((not (false or false)) and T) then true else false);
-  V2648_cv18 = (if ((not (false or V2638_ok3_1)) and T) then true else false);
-  V2649_end = (if ((not (false or V2638_ok3_1)) and T) then true else false);
-  V2650_cv17 = (if (not (false or V2639_ok3_2)) then true else false);
-  V2651_end = (if (not (false or V2639_ok3_2)) then true else false);
-  V2652_en5 = (if ((not V2668_trm) and ((not V2659_s5_1) and ((V862_ok4 and 
-  V2655_lv21) or (V862_ok4 and V2654_lv20)))) then true else false);
-  V2653_en6 = (if ((not V2668_trm) and ((not V2660_s6_1) and (V862_ok4 and 
-  V2656_lv22))) then true else false);
-  V2654_lv20 = (if ((V891_sg4 and (not V892_sg4_1)) and (not (V878_s6_1 or 
-  V876_s5_1))) then (if (V2666_cv20 and V2667_end) then true else false) else 
-  false);
-  V2655_lv21 = (if V878_s6_1 then (if (V2664_cv21 and V2665_end) then true else 
-  false) else false);
-  V2656_lv22 = (if V876_s5_1 then (if (V2662_cv22 and V2663_end) then true else 
-  false) else false);
-  V2657_ok4_1 = (if V876_s5_1 then (if ((not (false or false)) and S) then true 
-  else false) else false);
-  V2658_ok4_2 = (if V878_s6_1 then (if ((not (false or V2657_ok4_1)) and R) 
-  then true else V2657_ok4_1) else V2657_ok4_1);
-  V2659_s5_1 = (if V876_s5_1 then (if (((V860_ok3 and V2637_lv19) or (V862_ok4 
-  and V2656_lv22)) or V2668_trm) then false else V876_s5_1) else V876_s5_1);
-  V2660_s6_1 = (if V878_s6_1 then (if (((V860_ok3 and V2637_lv19) or (V862_ok4 
-  and V2655_lv21)) or V2668_trm) then false else V878_s6_1) else V878_s6_1);
-  V2661_a_1 = (if (V891_sg4 and V2653_en6) then (x + 4) else V902_a_1);
-  V2662_cv22 = (if ((not (false or false)) and S) then true else false);
-  V2663_end = (if ((not (false or false)) and S) then true else false);
-  V2664_cv21 = (if ((not (false or V2657_ok4_1)) and R) then true else false);
-  V2665_end = (if ((not (false or V2657_ok4_1)) and R) then true else false);
-  V2666_cv20 = (if (not (false or V2658_ok4_2)) then true else false);
-  V2667_end = (if (not (false or V2658_ok4_2)) then true else false);
-  V2668_trm = ((not V891_sg4) and V892_sg4_1);
-  V2669_en8 = (if ((not V2685_trm) and ((not V2676_s8_1) and ((V865_ok7 and 
-  V2673_lv25) or (V865_ok7 and V2671_lv23)))) then true else false);
-  V2670_en9 = (if ((not V2685_trm) and ((not V2677_s9_1) and (V865_ok7 and 
-  V2672_lv24))) then true else false);
-  V2671_lv23 = (if ((V893_sg7 and (not V894_sg7_1)) and (not (V882_s9_1 or 
-  V880_s8_1))) then (if (V2683_cv23 and V2684_end) then true else false) else 
-  false);
-  V2672_lv24 = (if V880_s8_1 then (if (V2681_cv24 and V2682_end) then true else 
-  false) else false);
-  V2673_lv25 = (if V882_s9_1 then (if (V2679_cv25 and V2680_end) then true else 
-  false) else false);
-  V2674_ok7_1 = (if V882_s9_1 then (if ((not (false or false)) and R) then true 
-  else false) else false);
-  V2675_ok7_2 = (if V880_s8_1 then (if ((not (false or V2674_ok7_1)) and S) 
-  then true else V2674_ok7_1) else V2674_ok7_1);
-  V2676_s8_1 = (if V880_s8_1 then (if (((V860_ok3 and V2636_lv18) or (V865_ok7 
-  and V2672_lv24)) or V2685_trm) then false else V880_s8_1) else V880_s8_1);
-  V2677_s9_1 = (if V882_s9_1 then (if (((V860_ok3 and V2636_lv18) or (V865_ok7 
-  and V2673_lv25)) or V2685_trm) then false else V882_s9_1) else V882_s9_1);
-  V2678_a_1 = (if (V893_sg7 and V2670_en9) then (x + 2) else V2645_a_1);
-  V2679_cv25 = (if ((not (false or false)) and R) then true else false);
-  V2680_end = (if ((not (false or false)) and R) then true else false);
-  V2681_cv24 = (if ((not (false or V2674_ok7_1)) and S) then true else false);
-  V2682_end = (if ((not (false or V2674_ok7_1)) and S) then true else false);
-  V2683_cv23 = (if (not (false or V2675_ok7_2)) then true else false);
-  V2684_end = (if (not (false or V2675_ok7_2)) then true else false);
-  V2685_trm = ((not V893_sg7) and V894_sg7_1);
-  V2735_lv26 = (if (V853_ini and (not (V886_sg11_1 or V888_sg14_1))) then (if (
-  V2748_cv26 and V2749_end) then true else false) else false);
-  V2736_lv27 = (if V888_sg14_1 then (if (V2746_cv27 and V2747_end) then true 
-  else false) else false);
-  V2737_lv28 = (if V886_sg11_1 then (if (V2744_cv28 and V2745_end) then true 
-  else false) else false);
-  V2738_ok10_1 = (if V886_sg11_1 then (if ((not (false or false)) and V900_T1) 
-  then true else false) else false);
-  V2739_ok10_2 = (if V888_sg14_1 then (if ((not (false or V2738_ok10_1)) and 
-  V900_T1) then true else V2738_ok10_1) else V2738_ok10_1);
-  V2740_sg11_1 = (if V886_sg11_1 then (if ((V854_ok10 and V2737_lv28) or false) 
-  then false else V886_sg11_1) else V886_sg11_1);
-  V2741_sg14_1 = (if V888_sg14_1 then (if ((V854_ok10 and V2736_lv27) or false) 
-  then false else V888_sg14_1) else V888_sg14_1);
-  V2742_b_1 = (if (V885_sg11 and V2750_en12) then (x + 7) else V2759_b_1);
-  V2743_c_1 = (if (V883_sg10 and V2737_lv28) then (V904_c_1 + 1) else V904_c_1)
+  V2625_ok3_2 = (if V887_sg7_1 then (if ((not (false or V2624_ok3_1)) and T) 
+  then true else V2624_ok3_1) else V2624_ok3_1);
+  V2626_sg4_1 = (if V885_sg4_1 then (if ((V853_ok3 and V2623_lv19) or false) 
+  then false else V885_sg4_1) else V885_sg4_1);
+  V2627_sg7_1 = (if V887_sg7_1 then (if ((V853_ok3 and V2622_lv18) or false) 
+  then false else V887_sg7_1) else V887_sg7_1);
+  V2628_R1_1 = (if (V884_sg4 and V2641_lv21) then true else false);
+  V2629_S1_1 = (if (V884_sg4 and V2642_lv22) then true else false);
+  V2630_T1_1 = (if (V882_sg3 and V2623_lv19) then true else false);
+  V2631_a_1 = (if (V884_sg4 and V2638_en5) then (V2647_a_1 + 3) else V2647_a_1)
   ;
-  V2744_cv28 = (if ((not (false or false)) and V900_T1) then true else false);
-  V2745_end = (if ((not (false or false)) and V900_T1) then true else false);
-  V2746_cv27 = (if ((not (false or V2738_ok10_1)) and V900_T1) then true else 
+  V2632_cv19 = (if ((not (false or false)) and T) then true else false);
+  V2633_end = (if ((not (false or false)) and T) then true else false);
+  V2634_cv18 = (if ((not (false or V2624_ok3_1)) and T) then true else false);
+  V2635_end = (if ((not (false or V2624_ok3_1)) and T) then true else false);
+  V2636_cv17 = (if (not (false or V2625_ok3_2)) then true else false);
+  V2637_end = (if (not (false or V2625_ok3_2)) then true else false);
+  V2638_en5 = (if ((not V2654_trm) and ((not V2645_s5_1) and ((V855_ok4 and 
+  V2641_lv21) or (V855_ok4 and V2640_lv20)))) then true else false);
+  V2639_en6 = (if ((not V2654_trm) and ((not V2646_s6_1) and (V855_ok4 and 
+  V2642_lv22))) then true else false);
+  V2640_lv20 = (if ((V884_sg4 and (not V885_sg4_1)) and (not (V871_s6_1 or 
+  V869_s5_1))) then (if (V2652_cv20 and V2653_end) then true else false) else 
   false);
-  V2747_end = (if ((not (false or V2738_ok10_1)) and V900_T1) then true else 
-  false);
-  V2748_cv26 = (if (not (false or V2739_ok10_2)) then true else false);
-  V2749_end = (if (not (false or V2739_ok10_2)) then true else false);
-  V2750_en12 = (if ((not V2766_trm) and ((not V2757_s12_1) and ((V856_ok11 and 
-  V2753_lv30) or (V856_ok11 and V2752_lv29)))) then true else false);
-  V2751_en13 = (if ((not V2766_trm) and ((not V2758_s13_1) and (V856_ok11 and 
-  V2754_lv31))) then true else false);
-  V2752_lv29 = (if ((V885_sg11 and (not V886_sg11_1)) and (not (V870_s13_1 or 
-  V868_s12_1))) then (if (V2764_cv29 and V2765_end) then true else false) else 
-  false);
-  V2753_lv30 = (if V870_s13_1 then (if (V2762_cv30 and V2763_end) then true 
+  V2641_lv21 = (if V871_s6_1 then (if (V2650_cv21 and V2651_end) then true else 
+  false) else false);
+  V2642_lv22 = (if V869_s5_1 then (if (V2648_cv22 and V2649_end) then true else 
+  false) else false);
+  V2643_ok4_1 = (if V869_s5_1 then (if ((not (false or false)) and S) then true 
   else false) else false);
-  V2754_lv31 = (if V868_s12_1 then (if (V2760_cv31 and V2761_end) then true 
+  V2644_ok4_2 = (if V871_s6_1 then (if ((not (false or V2643_ok4_1)) and R) 
+  then true else V2643_ok4_1) else V2643_ok4_1);
+  V2645_s5_1 = (if V869_s5_1 then (if (((V853_ok3 and V2623_lv19) or (V855_ok4 
+  and V2642_lv22)) or V2654_trm) then false else V869_s5_1) else V869_s5_1);
+  V2646_s6_1 = (if V871_s6_1 then (if (((V853_ok3 and V2623_lv19) or (V855_ok4 
+  and V2641_lv21)) or V2654_trm) then false else V871_s6_1) else V871_s6_1);
+  V2647_a_1 = (if (V884_sg4 and V2639_en6) then (V895_a_1 + 4) else V895_a_1);
+  V2648_cv22 = (if ((not (false or false)) and S) then true else false);
+  V2649_end = (if ((not (false or false)) and S) then true else false);
+  V2650_cv21 = (if ((not (false or V2643_ok4_1)) and R) then true else false);
+  V2651_end = (if ((not (false or V2643_ok4_1)) and R) then true else false);
+  V2652_cv20 = (if (not (false or V2644_ok4_2)) then true else false);
+  V2653_end = (if (not (false or V2644_ok4_2)) then true else false);
+  V2654_trm = ((not V884_sg4) and V885_sg4_1);
+  V2655_en8 = (if ((not V2671_trm) and ((not V2662_s8_1) and ((V858_ok7 and 
+  V2659_lv25) or (V858_ok7 and V2657_lv23)))) then true else false);
+  V2656_en9 = (if ((not V2671_trm) and ((not V2663_s9_1) and (V858_ok7 and 
+  V2658_lv24))) then true else false);
+  V2657_lv23 = (if ((V886_sg7 and (not V887_sg7_1)) and (not (V875_s9_1 or 
+  V873_s8_1))) then (if (V2669_cv23 and V2670_end) then true else false) else 
+  false);
+  V2658_lv24 = (if V873_s8_1 then (if (V2667_cv24 and V2668_end) then true else 
+  false) else false);
+  V2659_lv25 = (if V875_s9_1 then (if (V2665_cv25 and V2666_end) then true else 
+  false) else false);
+  V2660_ok7_1 = (if V875_s9_1 then (if ((not (false or false)) and R) then true 
   else false) else false);
-  V2755_ok11_1 = (if V868_s12_1 then (if ((not (false or false)) and V898_S1) 
+  V2661_ok7_2 = (if V873_s8_1 then (if ((not (false or V2660_ok7_1)) and S) 
+  then true else V2660_ok7_1) else V2660_ok7_1);
+  V2662_s8_1 = (if V873_s8_1 then (if (((V853_ok3 and V2622_lv18) or (V858_ok7 
+  and V2658_lv24)) or V2671_trm) then false else V873_s8_1) else V873_s8_1);
+  V2663_s9_1 = (if V875_s9_1 then (if (((V853_ok3 and V2622_lv18) or (V858_ok7 
+  and V2659_lv25)) or V2671_trm) then false else V875_s9_1) else V875_s9_1);
+  V2664_a_1 = (if (V886_sg7 and V2656_en9) then (V2631_a_1 + 2) else V2631_a_1)
+  ;
+  V2665_cv25 = (if ((not (false or false)) and R) then true else false);
+  V2666_end = (if ((not (false or false)) and R) then true else false);
+  V2667_cv24 = (if ((not (false or V2660_ok7_1)) and S) then true else false);
+  V2668_end = (if ((not (false or V2660_ok7_1)) and S) then true else false);
+  V2669_cv23 = (if (not (false or V2661_ok7_2)) then true else false);
+  V2670_end = (if (not (false or V2661_ok7_2)) then true else false);
+  V2671_trm = ((not V886_sg7) and V887_sg7_1);
+  V2721_lv26 = (if (V846_ini and (not (V879_sg11_1 or V881_sg14_1))) then (if (
+  V2734_cv26 and V2735_end) then true else false) else false);
+  V2722_lv27 = (if V881_sg14_1 then (if (V2732_cv27 and V2733_end) then true 
+  else false) else false);
+  V2723_lv28 = (if V879_sg11_1 then (if (V2730_cv28 and V2731_end) then true 
+  else false) else false);
+  V2724_ok10_1 = (if V879_sg11_1 then (if ((not (false or false)) and V893_T1) 
   then true else false) else false);
-  V2756_ok11_2 = (if V870_s13_1 then (if ((not (false or V2755_ok11_1)) and 
-  V896_R1) then true else V2755_ok11_1) else V2755_ok11_1);
-  V2757_s12_1 = (if V868_s12_1 then (if (((V854_ok10 and V2737_lv28) or (
-  V856_ok11 and V2754_lv31)) or V2766_trm) then false else V868_s12_1) else 
-  V868_s12_1);
-  V2758_s13_1 = (if V870_s13_1 then (if (((V854_ok10 and V2737_lv28) or (
-  V856_ok11 and V2753_lv30)) or V2766_trm) then false else V870_s13_1) else 
-  V870_s13_1);
-  V2759_b_1 = (if (V885_sg11 and V2751_en13) then (x + 8) else V903_b_1);
-  V2760_cv31 = (if ((not (false or false)) and V898_S1) then true else false);
-  V2761_end = (if ((not (false or false)) and V898_S1) then true else false);
-  V2762_cv30 = (if ((not (false or V2755_ok11_1)) and V896_R1) then true else 
+  V2725_ok10_2 = (if V881_sg14_1 then (if ((not (false or V2724_ok10_1)) and 
+  V893_T1) then true else V2724_ok10_1) else V2724_ok10_1);
+  V2726_sg11_1 = (if V879_sg11_1 then (if ((V847_ok10 and V2723_lv28) or false) 
+  then false else V879_sg11_1) else V879_sg11_1);
+  V2727_sg14_1 = (if V881_sg14_1 then (if ((V847_ok10 and V2722_lv27) or false) 
+  then false else V881_sg14_1) else V881_sg14_1);
+  V2728_b_1 = (if (V878_sg11 and V2736_en12) then (x + 7) else V2745_b_1);
+  V2729_c_1 = (if (V876_sg10 and V2723_lv28) then (V897_c_1 + 1) else V897_c_1)
+  ;
+  V2730_cv28 = (if ((not (false or false)) and V893_T1) then true else false);
+  V2731_end = (if ((not (false or false)) and V893_T1) then true else false);
+  V2732_cv27 = (if ((not (false or V2724_ok10_1)) and V893_T1) then true else 
   false);
-  V2763_end = (if ((not (false or V2755_ok11_1)) and V896_R1) then true else 
+  V2733_end = (if ((not (false or V2724_ok10_1)) and V893_T1) then true else 
   false);
-  V2764_cv29 = (if (not (false or V2756_ok11_2)) then true else false);
-  V2765_end = (if (not (false or V2756_ok11_2)) then true else false);
-  V2766_trm = ((not V885_sg11) and V886_sg11_1);
-  V2767_en15 = (if ((not V2783_trm) and ((not V2774_s15_1) and ((V858_ok14 and 
-  V2770_lv33) or (V858_ok14 and V2769_lv32)))) then true else false);
-  V2768_en16 = (if ((not V2783_trm) and ((not V2775_s16_1) and (V858_ok14 and 
-  V2771_lv34))) then true else false);
-  V2769_lv32 = (if ((V887_sg14 and (not V888_sg14_1)) and (not (V874_s16_1 or 
-  V872_s15_1))) then (if (V2781_cv32 and V2782_end) then true else false) else 
+  V2734_cv26 = (if (not (false or V2725_ok10_2)) then true else false);
+  V2735_end = (if (not (false or V2725_ok10_2)) then true else false);
+  V2736_en12 = (if ((not V2752_trm) and ((not V2743_s12_1) and ((V849_ok11 and 
+  V2739_lv30) or (V849_ok11 and V2738_lv29)))) then true else false);
+  V2737_en13 = (if ((not V2752_trm) and ((not V2744_s13_1) and (V849_ok11 and 
+  V2740_lv31))) then true else false);
+  V2738_lv29 = (if ((V878_sg11 and (not V879_sg11_1)) and (not (V863_s13_1 or 
+  V861_s12_1))) then (if (V2750_cv29 and V2751_end) then true else false) else 
   false);
-  V2770_lv33 = (if V874_s16_1 then (if (V2779_cv33 and V2780_end) then true 
+  V2739_lv30 = (if V863_s13_1 then (if (V2748_cv30 and V2749_end) then true 
   else false) else false);
-  V2771_lv34 = (if V872_s15_1 then (if (V2777_cv34 and V2778_end) then true 
+  V2740_lv31 = (if V861_s12_1 then (if (V2746_cv31 and V2747_end) then true 
   else false) else false);
-  V2772_ok14_1 = (if V872_s15_1 then (if ((not (false or false)) and V898_S1) 
+  V2741_ok11_1 = (if V861_s12_1 then (if ((not (false or false)) and V891_S1) 
   then true else false) else false);
-  V2773_ok14_2 = (if V874_s16_1 then (if ((not (false or V2772_ok14_1)) and 
-  V896_R1) then true else V2772_ok14_1) else V2772_ok14_1);
-  V2774_s15_1 = (if V872_s15_1 then (if (((V854_ok10 and V2736_lv27) or (
-  V858_ok14 and V2771_lv34)) or V2783_trm) then false else V872_s15_1) else 
-  V872_s15_1);
-  V2775_s16_1 = (if V874_s16_1 then (if (((V854_ok10 and V2736_lv27) or (
-  V858_ok14 and V2770_lv33)) or V2783_trm) then false else V874_s16_1) else 
-  V874_s16_1);
-  V2776_b_1 = (if (V887_sg14 and V2768_en16) then (x + 6) else V2742_b_1);
-  V2777_cv34 = (if ((not (false or false)) and V898_S1) then true else false);
-  V2778_end = (if ((not (false or false)) and V898_S1) then true else false);
-  V2779_cv33 = (if ((not (false or V2772_ok14_1)) and V896_R1) then true else 
+  V2742_ok11_2 = (if V863_s13_1 then (if ((not (false or V2741_ok11_1)) and 
+  V889_R1) then true else V2741_ok11_1) else V2741_ok11_1);
+  V2743_s12_1 = (if V861_s12_1 then (if (((V847_ok10 and V2723_lv28) or (
+  V849_ok11 and V2740_lv31)) or V2752_trm) then false else V861_s12_1) else 
+  V861_s12_1);
+  V2744_s13_1 = (if V863_s13_1 then (if (((V847_ok10 and V2723_lv28) or (
+  V849_ok11 and V2739_lv30)) or V2752_trm) then false else V863_s13_1) else 
+  V863_s13_1);
+  V2745_b_1 = (if (V878_sg11 and V2737_en13) then (x + 8) else V896_b_1);
+  V2746_cv31 = (if ((not (false or false)) and V891_S1) then true else false);
+  V2747_end = (if ((not (false or false)) and V891_S1) then true else false);
+  V2748_cv30 = (if ((not (false or V2741_ok11_1)) and V889_R1) then true else 
   false);
-  V2780_end = (if ((not (false or V2772_ok14_1)) and V896_R1) then true else 
+  V2749_end = (if ((not (false or V2741_ok11_1)) and V889_R1) then true else 
   false);
-  V2781_cv32 = (if (not (false or V2773_ok14_2)) then true else false);
-  V2782_end = (if (not (false or V2773_ok14_2)) then true else false);
-  V2783_trm = ((not V887_sg14) and V888_sg14_1);
+  V2750_cv29 = (if (not (false or V2742_ok11_2)) then true else false);
+  V2751_end = (if (not (false or V2742_ok11_2)) then true else false);
+  V2752_trm = ((not V878_sg11) and V879_sg11_1);
+  V2753_en15 = (if ((not V2769_trm) and ((not V2760_s15_1) and ((V851_ok14 and 
+  V2756_lv33) or (V851_ok14 and V2755_lv32)))) then true else false);
+  V2754_en16 = (if ((not V2769_trm) and ((not V2761_s16_1) and (V851_ok14 and 
+  V2757_lv34))) then true else false);
+  V2755_lv32 = (if ((V880_sg14 and (not V881_sg14_1)) and (not (V867_s16_1 or 
+  V865_s15_1))) then (if (V2767_cv32 and V2768_end) then true else false) else 
+  false);
+  V2756_lv33 = (if V867_s16_1 then (if (V2765_cv33 and V2766_end) then true 
+  else false) else false);
+  V2757_lv34 = (if V865_s15_1 then (if (V2763_cv34 and V2764_end) then true 
+  else false) else false);
+  V2758_ok14_1 = (if V865_s15_1 then (if ((not (false or false)) and V891_S1) 
+  then true else false) else false);
+  V2759_ok14_2 = (if V867_s16_1 then (if ((not (false or V2758_ok14_1)) and 
+  V889_R1) then true else V2758_ok14_1) else V2758_ok14_1);
+  V2760_s15_1 = (if V865_s15_1 then (if (((V847_ok10 and V2722_lv27) or (
+  V851_ok14 and V2757_lv34)) or V2769_trm) then false else V865_s15_1) else 
+  V865_s15_1);
+  V2761_s16_1 = (if V867_s16_1 then (if (((V847_ok10 and V2722_lv27) or (
+  V851_ok14 and V2756_lv33)) or V2769_trm) then false else V867_s16_1) else 
+  V867_s16_1);
+  V2762_b_1 = (if (V880_sg14 and V2754_en16) then (x + 6) else V2728_b_1);
+  V2763_cv34 = (if ((not (false or false)) and V891_S1) then true else false);
+  V2764_end = (if ((not (false or false)) and V891_S1) then true else false);
+  V2765_cv33 = (if ((not (false or V2758_ok14_1)) and V889_R1) then true else 
+  false);
+  V2766_end = (if ((not (false or V2758_ok14_1)) and V889_R1) then true else 
+  false);
+  V2767_cv32 = (if (not (false or V2759_ok14_2)) then true else false);
+  V2768_end = (if (not (false or V2759_ok14_2)) then true else false);
+  V2769_trm = ((not V880_sg14) and V881_sg14_1);
 tel
 
 
 ----------------********************************** automaton version********************
 
 node events1(R, S, T: bool; x: int) returns(a, b, c: int);
-var init :bool;--R1, R1_1, S1, S1_1, T1, T1_1: event;
+  var a_1, b_1, c_1 :int; init :bool;--R1, R1_1, S1, S1_1, T1, T1_1: event;
 let
   -- initial values
-
-  init =true -> false;
+	a_1 = 0-> pre a;
+	b_1 = 0-> pre b;
+	c_1 = 0-> pre c;
+    init =true -> false;
  
 --Automate A 
   automaton a
 
 --execute A entry action
   state A1:
-   unless (T and not init) resume A2
-   var a_1, b_1, c_1 : int;
+   unless (not R and not S and not init and T) resume A2
 	let		
-	    a_1 = 0-> pre a;
-		b_1 = 0-> pre b;
-		c_1 = 0-> pre c;
+
 		automaton aa1
 			
 		state A1A_ENTRY:
@@ -416,12 +417,13 @@ let
 				a = x + 1;
 				b = b_1;
 				c = c_1;
+				
 			tel
 		until true resume A1A_IDL
 		
 		state A1A_IDL:
-		    unless T resume A1A_ENTRY
-			unless (S and not T) resume A1A_EXIT_A1B_ENTRY
+		    --unless T resume A1A_ENTRY
+			unless (S) resume A1A_EXIT_A1B_ENTRY
 			let
 				a = a_1;
 				b = b_1;
@@ -438,8 +440,8 @@ let
 		until true resume A1B_IDL
 		
 		state A1B_IDL:
-			unless T resume A1A_ENTRY
-			unless (R and not T) resume A1B_EXIT_A1A_ENTRY
+			--unless T resume A1A_ENTRY
+			unless (R ) resume A1B_EXIT_A1A_ENTRY
 			let
 				a = a_1;
 				b = b_1;
@@ -459,12 +461,9 @@ let
 
 
   state A2:
-  unless T resume A1
-  var a_1, b_1, c_1 : int;
+  unless T restart A1
+
 	let		
-	    a_1 = 0-> pre a;
-		b_1 = 0-> pre b;
-		c_1 = 0-> pre c;
 		automaton a2
 
 			
@@ -477,8 +476,8 @@ let
 		until true resume A2A_IDL
 		
 		state A2A_IDL:
-			unless T resume A2A_ENTRY
-			unless (S and not T)  resume A2A_EXIT_A2B_ENTRY
+			--unless T resume A2A_ENTRY
+			unless (S)  resume A2A_EXIT_A2B_ENTRY
 			let
 				a = a_1;
 				b = b_1;
@@ -495,8 +494,8 @@ let
 		until true resume A2B_IDL
 		
 		state A2B_IDL:
-			unless T resume A2A_ENTRY
-			unless (R and not T)  resume A2B_EXIT_A2A_ENTRY
+			--unless T resume A2A_ENTRY
+			unless (R)  resume A2B_EXIT_A2A_ENTRY
 			let
 				a = a_1;
 				b = b_1;
